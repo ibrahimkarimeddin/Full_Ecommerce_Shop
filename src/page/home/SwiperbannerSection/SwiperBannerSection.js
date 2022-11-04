@@ -1,16 +1,31 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay, EffectFade } from 'swiper';
 
-
+    const IMages = [
+        {
+            src:'/swiperImage/image.jpg ',
+            className:'mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg'    
+        },
+        {
+            src:'/swiperImage/image2.jpg ',
+            className:'mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg'
+        },
+        {
+            src:'/swiperImage/image3..jpg ',
+            className:'mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg'
+        }
+    ]
 function SwiperBannerSection() {
+
   return (
-    <Swiper
+    <section className='relative bg-gray-50'>
+         <Swiper
    
-    modules={[Navigation, Pagination, Scrollbar, A11y ,Autoplay]}
+    modules={[Navigation, Pagination, Scrollbar, A11y ,Autoplay ,EffectFade]}
     centeredSlides={true}
     autoplay={{
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: false,
     }}
       spaceBetween={0}
@@ -19,12 +34,19 @@ function SwiperBannerSection() {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide><img src='/swiperImage/image.jpg ' alt="swiper_image" className='mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg' /></SwiperSlide>
-      <SwiperSlide><img src='/swiperImage/image2.jpg ' alt="swiper_image" className='mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg' /></SwiperSlide>
-      <SwiperSlide><img src='/swiperImage/image3..jpg ' alt="swiper_image" className='mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg' /></SwiperSlide>
-
-      
+        {
+            IMages.map((image , i)=>(
+                <span className='relative'>
+                <SwiperSlide><img   className={image.className} src={image.src} alt="swiper_image"/></SwiperSlide>
+                
+                </span>
+            ))
+        }
+ 
+   
     </Swiper>
+    </section>
+   
   )
 }
 
