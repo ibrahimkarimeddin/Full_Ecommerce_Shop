@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import {BsFillCartDashFill ,BsWhatsapp ,BsFacebook,BsMessenger ,BsInstagram ,BsFillPersonFill, BsSearch} from 'react-icons/bs'
+import {BsFillCartDashFill ,BsWhatsapp ,BsFacebook,BsMessenger ,BsInstagram ,BsFillPersonFill, BsSearch } from 'react-icons/bs'
 import {MdOutlineBookmarkBorder,MdOutlineFavoriteBorder} from 'react-icons/md'
 import {SearchInput}  from "../../components/SearchInput.js"
 import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem} from 'reactstrap';
@@ -14,7 +14,7 @@ export default function Exam() {
     return (
       <div>
         <Navbar  light expand="md" className='px-0 bg-gray-50  '>
-          <NavbarBrand href="/"><img src='/logo/images.png' className='w-12 h-12 md:w-20 md:h-20' alt="logo" /></NavbarBrand>
+          <NavbarBrand href="/"><img src='/logo/images.png' className='w-12 h-12 md:w-20 md:h-20' alt="logo" displaed/></NavbarBrand>
           <NavbarBrand href="/" className='md:hidden'>
           <SearchInput value={<BsSearch className='h-6'/>} className={"shadow-md h-full   flex relative left-15 w-[50vw] lg:w-[350px] placeholder:text-[4px]"}/> 
           </NavbarBrand>
@@ -24,28 +24,28 @@ export default function Exam() {
             <Nav className="ml-auto " navbar>
             
               <UncontrolledDropdown nav inNavbar className=''>
-                <DropdownToggle nav caret className='secondary'>
+                <DropdownToggle nav caret className='secondary ml-4'>
                 Communication
                 </DropdownToggle>
                 <DropdownMenu end className='w-40'>
-                <DropdownItem   className='flex items-center justify-around '>
-                     <BsFillPersonFill className='ml-2'/> Your Profaile 
+                <DropdownItem   className='flex items-center justify-around secondary border-2 p-2 border-black '>
+                     <BsFillPersonFill className='ml-2 primary'/> Your Profaile 
                   </DropdownItem>
-                  <DropdownItem className='flex items-center justify-around '>
-                    <BsWhatsapp />Whatsapp 
+                  <DropdownItem className='flex items-center justify-around  secondary p-2 '>
+                    <BsWhatsapp className=' primary' />Whatsapp 
                   </DropdownItem>
-                  <DropdownItem className='flex items-center justify-around '>
-                  <BsFacebook /> FaceBook
+                  <DropdownItem className='flex items-center justify-around  secondary p-2'>
+                  <BsFacebook  className=' primary'/> FaceBook
                   </DropdownItem>
-                  <DropdownItem  className='flex items-center justify-around '>
-                  <BsInstagram />Instagram
+                  <DropdownItem  className='flex items-center justify-around secondary p-2'>
+                  <BsInstagram  className=' primary'/>Instagram
                   </DropdownItem>
-                  <DropdownItem   className='flex items-center justify-around '>
-                  <BsMessenger />Massenger
+                  <DropdownItem   className='flex items-center justify-around secondary p-2'>
+                  <BsMessenger  className=' primary'/>Massenger
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem className='opacity-0 md:hidden'>
+              <NavItem className='opacity-0 md:hidden h-3'>
                ...
               </NavItem>
               <NavItem className='mx-3 flex items-center  secondary  '>
