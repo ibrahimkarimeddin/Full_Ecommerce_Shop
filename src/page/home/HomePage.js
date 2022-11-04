@@ -1,9 +1,10 @@
 import React from 'react'
+import SwiperBannerSection from './SwiperbannerSection/SwiperBannerSection'
 
 function HomePage() {
   return (
-    <main className='max-w-5xl  bg-gray-100  mx-auto h-screen'>
-        e
+    <main className='max-w-5xl   mx-auto h-screen'>
+        <SwiperBannerSection/>
     </main>
   )
 }

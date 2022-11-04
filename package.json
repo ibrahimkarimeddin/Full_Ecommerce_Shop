@@ -25,6 +25,7 @@
     "react-scripts": "5.0.1",
     "reactstrap": "^9.1.4",
     "sass": "^1.56.0",
+    "swiper": "^8.4.4",
     "web-vitals": "^2.1.4",
     "yep": "^0.1.0",
     "yup": "^0.32.11"

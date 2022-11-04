@@ -7,9 +7,7 @@ function App(){
   const queryclient = new QueryClient()
     return (
       <QueryClientProvider client={queryclient}>
-        <div className="App">
-          <h1>mhmad dsasdasd</h1>
-        </div>
+        <Navbar/>
       </QueryClientProvider>
       
     )
