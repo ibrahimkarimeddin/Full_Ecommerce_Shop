@@ -14,7 +14,7 @@ export default function Exam() {
     return (
       <div>
         <Navbar  light expand="md" className='px-0 bg-gray-50  '>
-          <NavbarBrand href="/"><img src='/logo/images.png' className='w-12 h-12 md:w-20 md:h-20' alt="logo" displaed/></NavbarBrand>
+          <NavbarBrand href="/"><img src='/logo/images.png' className='w-12 h-12 md:w-20 md:h-20' alt="logo" displaed={"true".toString()}/></NavbarBrand>
           <NavbarBrand href="/" className='md:hidden'>
           <SearchInput value={<BsSearch className='h-6'/>} className={"shadow-md h-full   flex relative left-15 w-[50vw] lg:w-[350px] placeholder:text-[4px]"}/> 
           </NavbarBrand>

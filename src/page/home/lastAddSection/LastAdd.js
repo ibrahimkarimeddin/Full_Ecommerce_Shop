@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'reactstrap'
-import {BsArrowLeftCircleFill} from 'react-icons/bs'
+import {TiArrowLeftOutline} from 'react-icons/ti'
 import SwiperLastAdd from './SwiperLastAdd'
 function LastAdd() {
   return (
@@ -17,7 +17,7 @@ function LastAdd() {
                         </p>
                     </div>
                     <div>
-                        <BsArrowLeftCircleFill  className='text-3xl primary'/>
+                        <TiArrowLeftOutline  className='text-3xl primary'/>
                     </div>
                 </div>
             </div>

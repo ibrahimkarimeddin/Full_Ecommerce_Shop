@@ -1,7 +1,6 @@
 import { Button, Input } from "reactstrap"
 
 export const SearchInput =(props)=>{
-    console.log(props.className);
     return(
         <div className={`ml-auto flex relative ${props.className}`}   >
         <Input  placeholder='Search'  onChange={props.callback} />

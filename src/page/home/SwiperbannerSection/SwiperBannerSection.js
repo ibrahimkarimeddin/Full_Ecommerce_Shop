@@ -4,14 +4,17 @@ import { Navigation, Pagination, Scrollbar, A11y,Autoplay, EffectFade } from 'sw
 
     const IMages = [
         {
+          id:1,
             src:'/swiperImage/image.jpg ',
             className:'mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg'    
         },
         {
+          id:2,
             src:'/swiperImage/image2.jpg ',
             className:'mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg'
         },
         {
+          id:3,
             src:'/swiperImage/image3..jpg ',
             className:'mx-auto w-[90vw] h-[25vh] md:w-[55vw] md:h-[55vh] rounded-lg'
         }
@@ -31,13 +34,13 @@ function SwiperBannerSection() {
       spaceBetween={0}
       slidesPerView={1}
       
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => ""}
+      onSwiper={(swiper) => ""}
     >
         {
             IMages.map((image , i)=>(
-                <span className='relative'>
-                <SwiperSlide><img   className={image.className} src={image.src} alt="swiper_image"/></SwiperSlide>
+                <span className='relative' key={image.id}>
+                <SwiperSlide  key={image.id}><img   className={image.className} src={image.src} alt="swiper_image"/></SwiperSlide>
                 
                 </span>
             ))

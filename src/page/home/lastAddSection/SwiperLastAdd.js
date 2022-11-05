@@ -30,7 +30,7 @@ function SwiperLastAdd() {
     centeredSlides={true}
     autoplay={{
       delay: 2000,
-      initialSlide: CardItemstems.length ,
+      initialSlide: "2" ,
       disableOnInteraction: false,
       reverseDirection: "true"
     }}
@@ -48,12 +48,12 @@ function SwiperLastAdd() {
          
       }}
       
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() =>" console.log('slide change')"}
+      onSwiper={(swiper) => "console.log(swiper)"}
     >
         {
             CardItemstems.map((carditem , i)=>(
-                <SwiperSlide>
+                <SwiperSlide key={i}>
                     <Card  CardItems={carditem} />
                 </SwiperSlide>
                 

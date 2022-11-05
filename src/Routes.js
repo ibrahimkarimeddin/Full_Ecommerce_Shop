@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from './page/components/Navbar'
-import App from "./App";
 import HomePage from "./page/home/HomePage";
 import { PrivateRoutes } from "./PrivateRoutes";
-
+import './styles/App.css';
+import './assets/scss/app.scss'
    
 
   export const AppRoute =()=>{
